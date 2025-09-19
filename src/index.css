@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+@font-face {
+    font-family: "Vastago Grotesk";
+    src: url("../src/assets/fonts/VastagoGrotesk-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+@import "tailwindcss";
+
+@theme {
+    --color-pale-green: #d5dcc6;
+    --color-green-200: #bfd0ad;
+    --color-accent: #09220a;
+    --font-title: "Vastago Grotesk";
+    --font-cursive: "Style Script";
+}
+
+@layer utilities {
+    .active-scale:hover {
+        @apply cursor-pointer scale-[102%] transition-all duration-200 ease-linear;
+    }
+
+    * {
+        @apply text-accent;
+    }
+}
