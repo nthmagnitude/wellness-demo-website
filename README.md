@@ -1,3 +1,3 @@
 # Wellness demo website
 
-![desktop](./screenshot/desktop.png)
+![desktop](./screenshot/desktop.webp)
