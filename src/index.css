@@ -10,13 +10,16 @@
 @theme {
     --color-pale-green: #d5dcc6;
     --color-green-200: #bfd0ad;
+    --color-green-300: #c1d1ad;
+    --color-green-500: #a3bb84;
     --color-accent: #09220a;
     --font-title: "Vastago Grotesk";
     --font-cursive: "Style Script";
 }
 
 @layer utilities {
-    .active-scale:hover {
+    .active-scale:hover,
+    button:hover {
         @apply cursor-pointer scale-[102%] transition-all duration-200 ease-linear;
     }
 

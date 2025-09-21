@@ -1,9 +1,100 @@
-import { LuUser } from "react-icons/lu";
+import { LuArrowRight, LuUser } from "react-icons/lu";
 import hero from "./assets/images/hero.webp";
 import yogaPose from "./assets/images/yoga-pose.png";
 import flexedMuscles from "./assets/images/muscles.png";
 import health from "./assets/images/heart.png";
+import instructor1 from "./assets/images/instructor1.webp";
+import instructor2 from "./assets/images/instructor2.webp";
+import instructor3 from "./assets/images/instructor3.webp";
+import display1 from "./assets/images/display1.webp";
+import display2 from "./assets/images/display2.webp";
+import display3 from "./assets/images/display3.webp";
+import display4 from "./assets/images/display4.webp";
+import display5 from "./assets/images/display5.webp";
 import Card from "./components/Card";
+import type { serviceProps } from "./components/ReviewCard";
+import ReviewCard from "./components/ReviewCard";
+import { AiFillApple } from "react-icons/ai";
+import playstore from "./assets/images/playstore.png";
+import appSample from "./assets/images/app-sample.webp";
+import type { PriceCardProps } from "./components/PriceCard";
+import PriceCard from "./components/PriceCard";
+import { FaFacebook } from "react-icons/fa6";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
+
+const reviews: Array<serviceProps> = [
+  {
+    name: "Claire Branford",
+    username: "@staking",
+    review: "My brother, I can't thank you enough even if you say it's all me",
+    date: "22/03/2021",
+  },
+  {
+    name: "Jamie Kokot",
+    username: "@staking",
+    review: "I started going to the gym but had no idea what i was doing",
+    date: "22/03/2021",
+  },
+  {
+    name: "Claire Branford",
+    username: "@staking",
+    review: "My brother, I can't thank you enough even if you say it's all me",
+    date: "22/03/2021",
+  },
+
+  {
+    name: "Claire Branford",
+    username: "@staking",
+    review: "I started going to the gym but had no idea what i was doing",
+    date: "22/03/2021",
+  },
+  {
+    name: "Claire Branford",
+    username: "@staking",
+    review: "My brother, I can't thank you enough even if you say it's all me",
+    date: "22/03/2021",
+  },
+];
+
+const plans: Array<PriceCardProps> = [
+  {
+    title: "Starter plan",
+    price: 14,
+    features: [
+      "8 yoga classes per month",
+      "2 fitness training sessions per month",
+      "Access to online resources",
+      "Monthly wellness newsletter",
+    ],
+  },
+  {
+    title: "Basic plan",
+    price: 29,
+    features: [
+      "Unlimited yoga classes",
+      "4 fitness training sessions per month",
+      "1 personalized coaching session per month",
+      "Access to online resources",
+      "Monthly wellness newsletter",
+    ],
+    active: true,
+  },
+  {
+    title: "Premium plan",
+    price: 139,
+    features: [
+      "4 personalized coaching sessions per month",
+      "Customized fitness and yoga plans",
+      "Access to online resources",
+      "Monthly wellness newsletter",
+    ],
+  },
+];
 
 function App() {
   return (
@@ -15,7 +106,7 @@ function App() {
             Fitness <sup className="text-sm align-top">TM</sup>
           </h1>
 
-          <ul className="flex justify-between items-center space-x-6">
+          <ul className="hidden md:flex justify-between items-center space-x-6">
             <li>
               <a href="/">Trainers</a>
             </li>
@@ -112,6 +203,7 @@ function App() {
 
       {/*SERVICES SECTION*/}
       <section className="p-14">
+        <p className="uppercase">Our services</p>
         <div className="flex items-center justify-between">
           <div className="w-1/2">
             <h1 className="text-5xl mb-2">Our Services</h1>
@@ -146,11 +238,272 @@ function App() {
         </div>
       </section>
 
-      {/*TEAM SECTION*/}
+      {/* OUR TEAM*/}
       <section className="p-14">
         <p className="uppercase">Our team</p>
-        <h1 className="text-5xl">Meet Our Team</h1>
+        <h1 className="text-5xl mb-2">Meet Our Team</h1>
+
+        <div className="grid md:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-4 py-8 grid-rows-1 auto-rows-max">
+          <div className=" flex flex-col justify-between items-start bg-accent p-8 rounded-3xl xl:min-h-[30rem] md:min-h-96">
+            <div className="space-y-2">
+              <p className="uppercase text-white/70">Join the team</p>
+              <h1 className="text-3xl text-white">Personalized Coaching</h1>
+              <p className="text-white">
+                One-on-one sessions with our fitness and yoga experts. Get
+                personalized guidance and enchouragement to reach your specific
+                goals.
+              </p>
+            </div>
+            <button className="bg-green-200 text-accent font-semibold px-4 py-2 rounded-full active-scale">
+              View more
+            </button>
+          </div>
+          <div>
+            <img
+              src={instructor1}
+              alt=""
+              className="object-cover rounded-3xl h-full"
+            />
+            <div className="flex justify-between items-center mt-2">
+              <p>Clarke Brunet</p>
+              <p className="font-semibold active-scale">
+                View more <LuArrowRight className="inline" />
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <img
+              src={instructor2}
+              alt=""
+              className="object-cover rounded-3xl h-full"
+            />
+            <div className="flex justify-between items-center mt-2">
+              <p>Emily Sky</p>
+              <p className="font-semibold active-scale">
+                View more <LuArrowRight className="inline" />
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <img
+              src={instructor3}
+              alt=""
+              className="object-cover rounded-3xl h-full"
+            />
+            <div className="flex justify-between items-center mt-2">
+              <p>Chelsea Desque</p>
+              <p className="font-semibold active-scale">
+                View more <LuArrowRight className="inline" />
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
+
+      {/*REVIEWS SECTION*/}
+      <section className="p-14">
+        <div className="mb-6">
+          <h1 className="text-5xl w-1/2 mx-auto text-center">
+            Over 200+ reviews from our clients
+          </h1>
+        </div>
+        <div className="grid md:grid-cols-4 xl:grid-cols-5 gap-4">
+          {reviews.map((item, index) => (
+            <ReviewCard {...item} key={index} />
+          ))}
+        </div>
+      </section>
+
+      {/*DOWNLOAD SECTION*/}
+      <section className="p-14">
+        <div className="bg-gradient-to-br from-green-500 to-green-300 flex items-center rounded-3xl p-8 h-[28rem]">
+          <div className="xl:w-1/3 md:w-1/2 h-full flex flex-col justify-between px-4 py-8">
+            <div className="space-y-4">
+              <h1 className="text-5xl">
+                Clearmind, <span className="font-cursive">your partner</span> in
+                mental wellness.
+              </h1>
+              <p>
+                Find and bookyour favourite yoga classes from anywhere with our
+                yog app.
+              </p>
+            </div>
+            <div className="xl:mt-16 md:mt-8 flex items-center space-x-4">
+              {/*DOWNLOAD FROM APP AND PLAY STORE btns*/}
+              <div className="bg-black rounded-2xl p-2 w-max flex px-4 active-scale">
+                <AiFillApple fill="white" size={36} />
+                <div className="flex flex-col">
+                  <p className=" text-white/90 text-sm">Donwload on the</p>
+                  <p className="font-semibold text-white text-lg">App Store</p>
+                </div>
+              </div>
+              <div className="bg-black rounded-2xl p-2 w-max flex px-4 space-x-2 active-scale">
+                <img src={playstore} alt="playstore icon" className="w-12" />
+                <div className="flex flex-col">
+                  <p className=" text-white/90 text-sm">Donwload on the</p>
+                  <p className="font-semibold text-white text-lg">PlayStore</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative flex-1">
+            <img
+              src={appSample}
+              alt=""
+              className="absolute w-[36rem] h-[36rem] object-contain inset-0 m-auto z-10"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/*PRICING*/}
+      <section className="p-14">
+        <div className="w-1/2  mx-auto">
+          <h1 className="text-center text-6xl">
+            Community <span className="font-cursive text-8xl">sweat</span>{" "}
+            classes
+          </h1>
+          <p>
+            If you're looking to supplement your current fitness routine with
+            small group training or just want to join a few classes a month then
+            take a look a our class pass options below.
+          </p>
+        </div>
+        <div className="grid grid-cols-3 gap-4 mt-4">
+          {plans.map((item, index) => (
+            <PriceCard {...item} key={index} />
+          ))}
+        </div>
+      </section>
+
+      {/*CONTACTS SECTION*/}
+      <section className="p-14 flex items-center space-x-4">
+        {/*Images*/}
+        <div className="flex-1 flex items-center">
+          <img
+            src={display1}
+            alt=""
+            className="rounded-full object-cover xl:w-96 xl:h-96 md:w-52 md:h-52"
+          />
+          <div className="grid grid-cols-2 gap-4">
+            {/*Yeah, they don't have the same width and height, but i like it like that weirdly*/}
+            <img src={display2} alt="" className="rounded-full object-cover" />
+            <img src={display3} alt="" className="rounded-full object-cover" />
+            <img src={display4} alt="" className="rounded-full object-cover" />
+            <img src={display5} alt="" className="rounded-full object-cover" />
+          </div>
+        </div>
+
+        <div className="w-1/3 space-y-4 px-2">
+          <h1 className="text-5xl">Get in touch.</h1>
+          <p>
+            I want to help you overcome all your mental and physical hurdles in
+            your everyday life. 6 years ago i was electrocuted with 777 volts
+            {/*No idea why was this was included in the design and i think it's funny*/}
+            .
+          </p>
+          <div className="flex flex-col">
+            <label htmlFor="email" className="mb-2">
+              Email (required)
+            </label>
+            <input
+              type="email"
+              placeholder="username@email.com"
+              className="mb-4 p-2 focus:outline-none focus:border-b focus:border-accent"
+            />
+            <label htmlFor="message" className="mb-2">
+              Message (required)
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="enter message here"
+              className="mb-4 p-2 focus:outline-none focus:border-b focus:border-accent bg-green-200"
+            ></textarea>
+            <button className="bg-accent text-white font-semibold px-2 py-4 rounded-full w-40">
+              Send
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/*FAQ SECTION*/}
+      <section className="p-14 bg-accent"></section>
+      {/*Footer SECTION*/}
+      <footer className="p-14 flex items-center justify-between">
+        <div className="flex md:flex-col space-y-6 justify-between w-1/3">
+          <h1 className="font-title text-5xl">
+            Fitness<sup className="text-[0.5rem] align-top">TM</sup>
+          </h1>
+          <p>
+            Join our newsletter to stay up to date on features and releases.
+          </p>
+          <div className="flex flex-col">
+            <label htmlFor="email">Enter your email</label>
+            <div className="flex w-full space-x-4">
+              <input
+                type="email"
+                placeholder="user@email.com"
+                className="focus:outline-none border-b border-accent flex-1"
+              />
+              <button className="bg-accent text-white font-semibold rounded-full px-4 py-2">
+                Subscribe
+              </button>
+            </div>
+          </div>
+          <p className="text-sm">
+            By subscribing you agree with our Privacy policy and provide consent
+            to recieve updates from our company.
+          </p>
+          <p>
+            &copy; {new Date().getFullYear().toString()} Template by Produlis
+          </p>
+        </div>
+        <div className="w-1/3 space-y-8 flex md:flex-col">
+          <div className="flex items-center space-x-10">
+            <div className="space-y-4 flex flex-col">
+              <h1 className="text-3xl font-semibold">Our services</h1>
+              <a href="/">Yoga classes</a>
+              <a href="/">Fitness training</a>
+              <a href="/">Wellness workshops</a>
+              <a href="/">Personalized coaching</a>
+            </div>
+            <div className="space-y-4 flex flex-col ">
+              <h1 className="text-3xl font-semibold">Follow us</h1>
+              <div className="flex items-center space-x-2">
+                <FaFacebook className="text-2xl" />
+                <p className=""> facebook</p>
+              </div>
+              <div className="flex items-center space-x-2">
+                <FaInstagram className="text-2xl" />
+                <p className=""> instagram</p>
+              </div>
+              <div className="flex items-center space-x-2">
+                <FaTwitter className="text-2xl" />
+                <p className=""> X</p>
+              </div>
+
+              <div className="flex items-center space-x-2">
+                <FaLinkedin className="text-2xl" />
+                <p className=""> LinkedIn</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex space-x-4">
+            <p>Licensing</p>
+            <p>Style Guide</p>
+            <p
+              className="active-scale"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Back to top
+            </p>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
