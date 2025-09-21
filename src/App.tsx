@@ -20,12 +20,7 @@ import appSample from "./assets/images/app-sample.webp";
 import type { PriceCardProps } from "./components/PriceCard";
 import PriceCard from "./components/PriceCard";
 import { FaFacebook } from "react-icons/fa6";
-import {
-  FaInstagram,
-  FaLinkedin,
-  FaLinkedinIn,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const reviews: Array<serviceProps> = [
   {
